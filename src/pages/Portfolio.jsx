@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import arrowLeft from '../assets/arrowLeft.png'
 import arrowRight from '../assets/arrowRight.png'
-import cam from '../assets/cam.png'
+import cam from '../assets/Cam.svg'
 import rangoliHalf from '../assets/rangoliHalf.png'
 import subtract from '../assets/subtract.png'
 
@@ -57,7 +57,7 @@ export default function Portfolio() {
           </button>
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 hidden md:block">
+      <div className="fixed bottom-0 right-0 hidden md:block">
         <img src={rangoliHalf} alt="" className='h-96' />
       </div>
     </div>

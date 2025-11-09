@@ -5,6 +5,8 @@ import Input from '../component/Input';
 import TextArea from '../component/TextArea';
 
 export default function Contact() {
+  const apiUrl = import.meta.env.VITE_API_URL;
+  // console.log(apiUrl)
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -40,7 +42,7 @@ export default function Contact() {
     try {
       setLoading(true);
 
-      const res = await fetch("https://vernanbackend.ezlab.in/api/contact-us/", {
+      const res = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,7 +88,7 @@ export default function Contact() {
       <div className="flex md:flex-row flex-col items-center gap-2 pt-16 px-16 h-full relative z-10">
         <div className="w-1/2 md:block hidden">
           <p className='text-lg md:w-sm mx-auto text-center'>
-            Whether you have an idea, a question, or simply want to explore how V can work together, V’re just a message away.<br/>Let’s catch up over coffee.<br/>Great stories always begin with a good conversation
+            Whether you have an idea, a question, or simply want to explore how V can work together, V’re just a message away.<br />Let’s catch up over coffee.<br />Great stories always begin with a good conversation
           </p>
         </div>
 
