@@ -11,37 +11,37 @@ import { useNavigate } from 'react-router-dom';
 export default function Team() {
   const navigate = useNavigate()
   return (
-    <div>
+    <div className=''>
       <div className="md:absolute top-0 left-40">
-        <img src={noteClip} alt="" className='h-96' />
+        <img src={noteClip} alt="" className='md:h-96' />
       </div>
 
       <div className="md:absolute bottom-8 left-24 w-1/2">
         <img src={indiaGate} alt="" className='h-80' />
       </div>
 
-      <div className="absolute top-60 right-80 text-xl indie-flower-regular">
-        <span className="absolute bottom-9 -left-60 w-[280px]">
+      <div className="md:absolute top-60 right-80 text-xl indie-flower-regular">
+        <span className="absolute bottom-9 -left-60 w-[280px] hidden md:block">
           <img src={vector} alt="" className='w-[150px] mx-auto' />
           <p>Branding Experts</p>
         </span>
 
-        <div className="absolute -top-28 left-24 w-[280px] flex flex-col items-start">
+        <div className="absolute -top-28 left-24 w-[280px] flex-col items-start flex md:block">
           <p className='w-full'>Film Makers</p>
           <img src={vector1} alt="" className='mx-auto' />
         </div>
 
-        <div className="absolute top-2 w-[280px] -right-80">
+        <div className="absolute top-2 w-[280px] -right-80 md:block hidden">
           <p className='w-full text-center'>Art Curators</p>
           <img src={vector2} alt="" className='' />
         </div>
 
         <div className="-bottom-28 right-18 md:absolute flex flex-col items-center gap-4">
-          <p>Take a closer look at the stories V bring to life.</p>
+          <p className='md:text-base text-sm'>Take a closer look at the stories V bring to life.</p>
           <CommonButton onCLick={() => navigate("/portfolio")}>View Portfolio</CommonButton>
         </div>
 
-        <img src={group} alt="" className='' />
+        <img src={group} alt="" className='md:w-auto w-xs' />
       </div>
     </div>
   )

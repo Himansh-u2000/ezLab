@@ -13,7 +13,7 @@ export default function RootLayout() {
       }}
     >
       <Header />
-      <div className="h-[calc(100vh-104px)]">
+      <div className="min-h-[calc(100vh-135px)]">
         <Outlet />
       </div>
     </div>

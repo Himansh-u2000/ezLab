@@ -75,7 +75,7 @@ export default function Contact() {
 
   return (
     <div className='h-full md:relative'>
-      <div className="absolute bottom-0 left-0 md:block hidden">
+      <div className="fixed bottom-0 left-0 md:block hidden">
         <img src={rangoliOtherHalf} alt="" className='w-lg h-lg' />
       </div>
 
