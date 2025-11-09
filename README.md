@@ -1,16 +1,54 @@
-# React + Vite
+# Varnan — Front-End Intern Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page responsive React app (Vite + Tailwind) that recreates the Figma Home page and integrates a contact form with the provided API.
 
-Currently, two official plugins are available:
+Live preview (deployed on Vercel): https://your-vercel-deployment.vercel.app
+(Replace the URL above with your actual Vercel deployment URL.)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Responsive homepage (desktop & mobile)
+- Contact form with front-end validation and API integration
+- Reusable components: Input, TextArea, CommonButton, Hero, ServiceLayout
+- Environment-driven API URL via Vite (.env)
 
-## React Compiler
+## Tech Stack
+- React (Vite)
+- Tailwind CSS
+- react-router-dom
+- Fetch API
+- Environment variables via Vite (.env)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Contact Form / API
+- Endpoint (configured in [.env](.env)): `VITE_API_URL=https://vernanbackend.ezlab.in/api/contact-us/`
+- POST JSON body:
+  {
+    "name": "Test user",
+    "email": "testuser@gmail.com",
+    "phone": "908765498",
+    "message": "This is a message"
+  }
+- Behavior:
+  - Front-end validation for required fields and email format
+  - Shows "Form Submitted" on successful submission (HTTP 200)
+  - Loading state and basic error handling implemented in [`Contact`](src/pages/Contact.jsx)
 
-## Expanding the ESLint configuration
+## Setup (local)
+1. Install:
+   npm install
+2. Create/verify .env:
+   VITE_API_URL=https://vernanbackend.ezlab.in/api/contact-us/
+3. Run dev server:
+   npm run dev
+4. Build:
+   npm run build
+   npm run preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Notes / Suggestions
+- Improve accessibility (aria attributes, focus outlines).
+- Consider adding unit tests for validation and components.
+- Replace the Live Preview URL with the exact Vercel deployment link.
+
+## Deliverables
+- Git repository URL
+- Postman collection (export) for the contact API
+- Deployed app URL (Vercel)

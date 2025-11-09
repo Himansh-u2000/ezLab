@@ -3,7 +3,7 @@ import arrowLeft from '../assets/arrowLeft.png'
 import arrowRight from '../assets/arrowRight.png'
 import cam from '../assets/Cam.svg'
 import rangoliHalf from '../assets/rangoliHalf.png'
-import subtract from '../assets/subtract.png'
+import subtract from '../assets/Subtract.png'
 
 export default function Portfolio() {
   const videoLinks = [
